@@ -3,10 +3,10 @@
      <div class="container">
 
           <div class="webflow-style-input">
-            <input class="" type="email" placeholder="What's your email?" />
+            <input class="" type="text" placeholder="What's your email?" />
           </div>
           <div class="webflow-style-input">
-            <textarea class="" type="email" placeholder="What's your email?" />
+            <textarea class="" type="text" placeholder="What's your email?" />
           </div>
           <div class="webflow-style-input-file">
             <input class="file-field-upload" type="file" @change="files_upload">
@@ -49,7 +49,7 @@ export default {
         form.append('title', this.title);
         form.append('description',this.description);
         form.append('files',this.files);
-        await axios({
+        await this.axios({
         method: 'post',
         headers: {"Content-type": "application/json"},
         url: url,

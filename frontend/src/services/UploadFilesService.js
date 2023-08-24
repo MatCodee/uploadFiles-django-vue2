@@ -1,5 +1,6 @@
 import http from "../http-common";
 
+
 class UploadFilesService {
   // Esta es la funcion que se va a agregar al backend directamente
   add_blog_to_database(form) {
